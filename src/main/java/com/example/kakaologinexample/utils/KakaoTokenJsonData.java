@@ -7,14 +7,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Flux;
-
-import java.util.function.Consumer;
 
 @Component
 @RequiredArgsConstructor
-public class GetKakaoTokenJsonData {
+public class KakaoTokenJsonData {
     private final WebClient webClient;
     private static final String TOKEN_URI = "https://kauth.kakao.com/oauth/token";
     private static final String REDIRECT_URI = "https://localhost:8080/oauth";
