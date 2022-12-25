@@ -37,7 +37,7 @@ public class KakaoController {
         log.info("인가 코드를 이용하여 토큰을 받습니다.");
         KakaoTokenResponse kakaoTokenResponse = kakaoTokenJsonData.getToken(code);
         log.info("토큰에 대한 정보입니다.{}",kakaoTokenResponse);
-        KakaoUserInfoResponse userInfo = kakaoUserInfo.getUserInfo(kakaoTokenResponse.getAccess_token(), 1);
+        KakaoUserInfoResponse userInfo = kakaoUserInfo.getUserInfo(kakaoTokenResponse.getAccess_token());
         log.info("회원 정보 입니다.{}",userInfo);
 
         userService.createUser(userInfo.getKakao_account().getEmail());

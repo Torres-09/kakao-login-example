@@ -11,10 +11,9 @@ import reactor.core.publisher.Flux;
 public class KakaoUserInfo {
     private final WebClient webClient;
     private static final String USER_INFO_URI = "https://kapi.kakao.com/v2/user/me";
-    private static final String TARGET_ID_TYPE = "user_id";
 
-    public KakaoUserInfoResponse getUserInfo(String token, long target_id) {
-        String uri = USER_INFO_URI + "?target_id_type=" + TARGET_ID_TYPE + "&target_id=" + target_id;
+    public KakaoUserInfoResponse getUserInfo(String token) {
+        String uri = USER_INFO_URI;
 
         Flux<KakaoUserInfoResponse> response = webClient.get()
                 .uri(uri)
