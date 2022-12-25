@@ -19,17 +19,6 @@ public class KakaoTokenJsonData {
     private static final String CLIENT_ID = "01ccede82258a2929766b26644beed99";
 
     public KakaoTokenResponse getToken(String code) {
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        HttpEntity request = new HttpEntity(headers);
-
-//        UriComponentsBuilder uri = UriComponentsBuilder.fromHttpUrl(TOKEN_URI)
-//                .queryParam("grant_type", GRANT_TYPE)
-//                .queryParam("client_id", CLIENT_ID)
-//                .queryParam("redirect_uri", REDIRECT_URI)
-//                .queryParam("code", code);
-
         String uri = TOKEN_URI + "?grant_type=" + GRANT_TYPE + "&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URI + "&code=" + code;
         System.out.println(uri);
 
