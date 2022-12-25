@@ -86,4 +86,5 @@ public class KakaoController {
   | scope | String | 인증된 사용자의 정보 조회 권한 범위범위가 여러 개일 경우, 공백으로 구분참고: https://developers.kakao.com/docs/latest/ko/kakaologin/common#oidc가 활성화된 앱의 토큰 발급 요청인 경우, ID 토큰이 함께 발급되며 scope 값에 openid 포함 | X |
 
   파라미터와 반환 값으로는 다음과 같은 Value들이 있다.
-- ( Parameter, Response 출처 : [카카오 개발자 페이지](https://developers.kakao.com/docs/latest/ko/kakaologin/common) )
+
+( Parameter, Response 출처 : [카카오 개발자 페이지](https://developers.kakao.com/docs/latest/ko/kakaologin/common) )
