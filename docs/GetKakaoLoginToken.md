@@ -1,4 +1,4 @@
-# 카카오 로그인 토큰 받기
+ㅈ# 카카오 로그인 토큰 받기
 
 ```java
 @Controller
@@ -66,7 +66,7 @@ public class KakaoController {
   ### Parameter
 
   | Name | Type | Description | Required |
-      | --- | --- | --- | --- |
+  | --- | --- | --- | --- |
   | grant_type | String | authorization_code로 고정 | O |
   | client_id | String | 앱 REST API 키[내 애플리케이션] > [앱 키]에서 확인 가능 | O |
   | redirect_uri | String | 인가 코드가 리다이렉트된 URI | O |
@@ -76,7 +76,7 @@ public class KakaoController {
   ### Response
 
   | Name | Type | Description | Required |
-      | --- | --- | --- | --- |
+  | --- | --- | --- | --- |
   | token_type | String | 토큰 타입, bearer로 고정 | O |
   | access_token | String | 사용자 액세스 토큰 값 | O |
   | id_token | String | https://developers.kakao.com/docs/latest/ko/kakaologin/common#oidc-id-token 값OpenID Connect 확장 기능을 통해 발급되는 ID 토큰, Base64 인코딩 된 사용자 인증 정보 포함제공 조건: https://developers.kakao.com/docs/latest/ko/kakaologin/common#oidc가 활성화 된 앱의 토큰 발급 요청인 경우또는 scope에 openid를 포함한 https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#additional-consent 요청을 거친 토큰 발급 요청인 경우 | X |
