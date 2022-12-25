@@ -1,10 +1,12 @@
 package com.example.kakaologinexample.domain;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class UserService {
 
@@ -17,7 +19,7 @@ public class UserService {
                 .build();
 
         userRepository.save(user);
-        System.out.println("유저 저장 완료");
+        log.info("새로운 회원 저장 완료");
         return user.id;
     }
 }
